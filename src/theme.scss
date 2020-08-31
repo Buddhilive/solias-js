@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$firepost-app-primary: mat-palette($mat-blue-grey, 900);
+$firepost-app-accent: mat-palette($mat-red, A200);
+$firepost-app-warn: mat-palette($mat-red);
+$firepost-app-theme: mat-light-theme($firepost-app-primary, $firepost-app-accent, $firepost-app-warn);
+@include angular-material-theme($firepost-app-theme);

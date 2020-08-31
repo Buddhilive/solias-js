@@ -1,0 +1,25 @@
+.bl--spacer {
+    flex: 1 1 auto;
+}
+
+.bl--welcome {
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.bl-create-post-container {
+    background: #f3f3f3df;
+    .solias--editor {
+        margin: 0;
+        background: #fff;
+        height: 400px;
+        padding: 10px;
+    }
+}
+
+.example-boundary {
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    border: dotted #ccc 2px;
+}

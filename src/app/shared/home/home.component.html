@@ -1,0 +1,18 @@
+<!-- <mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span routerLink="/">Support</span>
+        <span class="spacer"></span>
+        <div *ngIf="_authService.afAuth.authState | async as user; else showLogin">
+            <span class="welcome">Hello {{ user.displayName }}!</span>
+            <button mat-raised-button color="accent" [routerLink]="['/app']" routerLinkActive="router-link-active">Design</button>
+            <button mat-button (click)="_authService.logoutApp()">Logout</button>
+        </div>
+        <ng-template #showLogin>
+            <button mat-button (click)="_authService.loginApp()">Login</button>
+        </ng-template>
+    </mat-toolbar-row>
+</mat-toolbar>
+<section class="buddhi--header-section">
+    <button mat-button>Hello</button>
+</section> -->
+<a [href]="fileServer.fileUrl" download="index.html">DownloadFile</a>

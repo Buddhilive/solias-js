@@ -1,0 +1,104 @@
+[debug] [2020-07-18T16:25:03.998Z] ----------------------------------------------------------------------
+[debug] [2020-07-18T16:25:04.001Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --token 1//0g6hmMSAQSavBCgYIARAAGBASNwF-L9IrYAp9phIFiRalplHSG4GGAIV-6XzFCdgLTViCPgvmvskhHx1jONSOYxg284kunJlCmRM
+[debug] [2020-07-18T16:25:04.001Z] CLI Version:   8.6.0
+[debug] [2020-07-18T16:25:04.001Z] Platform:      win32
+[debug] [2020-07-18T16:25:04.001Z] Node Version:  v12.18.1
+[debug] [2020-07-18T16:25:04.003Z] Time:          Sat Jul 18 2020 21:55:04 GMT+0530 (India Standard Time)
+[debug] [2020-07-18T16:25:04.003Z] ----------------------------------------------------------------------
+[debug] [2020-07-18T16:25:04.004Z] 
+[debug] [2020-07-18T16:25:04.024Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-18T16:25:04.025Z] > authorizing via --token option
+[debug] [2020-07-18T16:25:04.025Z] [iam] checking project buddhi-crm for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-07-18T16:25:04.027Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-18T16:25:04.027Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-18T16:25:04.332Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-07-18T16:25:04.335Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-18T16:25:04.336Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-18T16:25:04.561Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-07-18T16:25:04.829Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at Object.<anonymous> (C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:20:14)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at loadCommand (C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
+    at module.exports (C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
+[error] 
+[error] Error: Failed to get Firebase project buddhi-crm. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-07-19T02:27:37.251Z] ----------------------------------------------------------------------
+[debug] [2020-07-19T02:27:37.255Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-07-19T02:27:37.256Z] CLI Version:   8.6.0
+[debug] [2020-07-19T02:27:37.256Z] Platform:      win32
+[debug] [2020-07-19T02:27:37.256Z] Node Version:  v12.18.1
+[debug] [2020-07-19T02:27:37.259Z] Time:          Sun Jul 19 2020 07:57:37 GMT+0530 (India Standard Time)
+[debug] [2020-07-19T02:27:37.259Z] ----------------------------------------------------------------------
+[debug] [2020-07-19T02:27:37.260Z] 
+[debug] [2020-07-19T02:27:37.283Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-19T02:27:37.284Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\DevDojo\@buddhilive\solias
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using buddhi-crm. 
+[debug] [2020-07-19T02:27:44.057Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-07-19T02:27:44.057Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-19T02:27:44.402Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-07-19T02:27:44.738Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at Object.<anonymous> (C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:20:14)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at loadCommand (C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
+    at module.exports (C:\Users\buddhi.ranasinghe\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
+[error] 
+[error] Error: Failed to get Firebase project buddhi-crm. Please make sure the project exists and your account has permission to access it.

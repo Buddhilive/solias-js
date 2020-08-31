@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span routerLink="/">Support</span>
+        <span class="bl--spacer"></span>
+        <div *ngIf="_authService.afAuth.authState | async as user; else showLogin">
+            <span class="bl--welcome">Hello {{ user.displayName }}!</span>
+            <button mat-raised-button color="accent" [routerLink]="['/app']" routerLinkActive="router-link-active">Design</button>
+            <button mat-button (click)="_authService.logoutApp()">Logout</button>
+        </div>
+        <ng-template #showLogin>
+            <button mat-button (click)="_authService.loginApp()">Login</button>
+        </ng-template>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container class="bl--drawer-container">
+    <mat-drawer mode="side" opened>
+        side panel
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="bl-create-post-container">
+            <div cdkDropList #editor class="solias--editor" (cdkDropListDropped)="onDropOver($event)">
+
+            </div>
+            <button mat-button (click)="addHTML()">Add HTML</button>
+            <button mat-button (click)="testFunc()">Get HTML</button>
+        </div>
+        <div class="example-boundary">
+            <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag>
+                I can only be dragged within the dotted container
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

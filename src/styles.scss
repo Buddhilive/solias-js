@@ -1,0 +1,213 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$solias-primary: mat-palette($mat-indigo);
+$solias-accent: mat-palette($mat-pink, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$solias-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$solias-theme: mat-light-theme($solias-primary, $solias-accent, $solias-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($solias-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.test-class {
+    background: #c01111df;
+}
+
+.buddhi--section-wrapper {
+    background: #f3f3f3df;
+    padding: 12px;
+    border: 1px solid #dfdfdf;
+    margin: 10px;
+    .buddhi--section-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .buddhi--add-element {
+        cursor: pointer;
+        padding: 5px;
+        color: #1594e5;
+        text-align: center;
+        font-size: 14px;
+        border: 2px dashed #a2a2a2;
+        margin: 6px 0;
+    }
+    .solias--element {
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+
+/* Editor */
+
+
+/* Let's highlight canvas boundaries */
+
+#gjs {
+    border: none;
+    height: 100% !important;
+}
+
+
+/* Reset some default styling */
+
+.gjs-cv-canvas {
+    width: 77%;
+}
+
+.gjs-block {
+    width: auto;
+    height: auto;
+    min-height: auto;
+}
+
+.gjs-editor {
+    position: unset;
+    height: 100%;
+    background: #101010;
+}
+
+.panel__top {
+    padding: 0;
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    position: initial;
+    justify-content: center;
+    justify-content: space-between;
+    background: #222;
+}
+
+.panel__basic-actions {
+    position: initial;
+}
+
+.editor-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    height: 94vh;
+}
+
+.editor-canvas {
+    flex-grow: 1;
+}
+
+.panel__right {
+    flex-basis: 23%;
+    position: relative;
+    overflow-y: auto;
+    background: #2b2b2b;
+    .layers-container {
+        display: none;
+    }
+    .styles-container {
+        display: none;
+    }
+    .traits-container {
+        display: none;
+    }
+}
+
+.panel__switcher {
+    position: initial;
+}
+
+.panel__devices {
+    position: initial;
+}
+
+.gjs-pn-btn {
+    background: transparent;
+}
+
+
+/* Theming */
+
+
+/* Primary color for the background */
+
+.gjs-one-bg {
+    background-color: #222222;
+}
+
+
+/* Secondary color for the text color */
+
+.gjs-two-color {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Tertiary color for the background */
+
+.gjs-three-bg {
+    background-color: #1594e5;
+    color: white;
+}
+
+
+/* Quaternary color for the text color */
+
+.gjs-four-color,
+.gjs-four-color-h:hover {
+    color: #1594e5;
+}
+
+
+/* Tooltip container */
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
