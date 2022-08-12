@@ -1,5 +1,6 @@
 import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
+import '../projects/solias-components/src/styles.scss';
 setCompodocJson(docJson);
 
 export const parameters = {
