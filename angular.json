@@ -24,8 +24,8 @@
             "tsConfig": "projects/solias-components/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/solias-components/src/favicon.ico",
-              "projects/solias-components/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "projects/solias-components/src/styles.scss"
@@ -207,7 +207,7 @@
       "projectType": "library",
       "root": "projects/components",
       "sourceRoot": "projects/components/src",
-      "prefix": "lib",
+      "prefix": "solias",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

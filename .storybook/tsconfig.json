@@ -12,6 +12,7 @@
     "../projects/**/*.spec.ts"
   ],
   "include": [
+    "../stories/**/*",
     "../src/**/*",
     "../projects/**/*"
   ],

@@ -1,0 +1,29 @@
+.#{$prefix}-btn {
+    font-size: 14px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    &__primary {
+        color: var(--md-sys-color-on-primary);
+        background-color: var(--md-sys-color-primary);
+        &:hover {
+            background-color: var(--md-sys-color-on-primary-container);
+        }
+    }
+    &__secondary {
+        color: var(--md-sys-color-on-secondary);
+        background-color: var(--md-sys-color-secondary);
+        &:hover {
+            background-color: var(--md-sys-color-on-secondary-container);
+        }
+    }
+    &__danger {
+        color: var(--md-sys-color-on-error);
+        background-color: var(--md-sys-color-error);
+        &:hover {
+            background-color: var(--md-sys-color-on-error-container);
+        }
+    }  
+}
