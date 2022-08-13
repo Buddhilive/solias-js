@@ -8,7 +8,29 @@ export default {
   component: ButtonComponent,
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
   argTypes: {
-    label: { control: 'text' },
+    label: {
+      name: 'Label',
+      description: 'Button label',
+      table: {
+        type: { 
+          summary: 'Button label', 
+          detail: 'text' 
+        },
+      },
+      control: 'text'
+    },
+    type: {
+      name: 'Button Type',
+      description: 'Button type',
+      table: {
+        type: { 
+          summary: 'Type of the button', 
+          detail: `'primary', 'secondary', 'danger'` 
+        },
+      },
+      control: 'select',
+      options: ['primary', 'secondary', 'danger']
+    }
   },
 } as Meta;
 
