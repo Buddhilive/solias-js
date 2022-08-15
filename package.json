@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --project previewer",
-    "build": "ng build --project solias-components",
+    "build": "ng run solias-components:prodbuild",
     "watch": "ng build --watch --configuration development --project components",
     "build:lib": "ng build --project components",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",

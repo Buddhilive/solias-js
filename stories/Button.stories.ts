@@ -30,6 +30,13 @@ export default {
       },
       control: 'select',
       options: ['primary', 'secondary', 'danger']
+    },
+    onClick: {
+      description: 'Click Event',
+      action: 'clicked',
+      table: {
+        category: 'Events'
+      }
     }
   },
 } as Meta;
