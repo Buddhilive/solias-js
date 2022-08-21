@@ -5,11 +5,13 @@
     "ng": "ng",
     "start": "ng serve --project previewer --port=4455",
     "build": "ng run solias-components:prodbuild",
+    "bundle": "gulp",
+    "publish": "cd build && npm publish",
     "watch": "ng build --watch --configuration development --project components",
     "build:lib": "ng build --project components",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
-    "build-storybook": "npm run docs:json && build-storybook"
+    "build-storybook": "npm run docs:json && build-storybook -o docs"
   },
   "private": true,
   "dependencies": {
@@ -17,10 +19,15 @@
     "@angular/common": "^14.1.0",
     "@angular/compiler": "^14.1.0",
     "@angular/core": "^14.1.0",
+    "@angular/elements": "^14.1.2",
     "@angular/forms": "^14.1.0",
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
