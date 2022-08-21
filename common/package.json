@@ -1,0 +1,19 @@
+{
+    "name": "solias-components",
+    "version": "0.0.1-beta",
+    "description": "A Web Component Library",
+    "dependencies": {},
+    "author": "Buddhi Kavindra Ranasinghe",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Buddhilive/solias"
+      },
+      "keywords": [
+        "Angular Elements"
+      ],
+      "bugs": {
+        "url": "https://github.com/Buddhilive/solias/issues"
+      },
+      "homepage": "https://solias.buddhilive.com"
+}
