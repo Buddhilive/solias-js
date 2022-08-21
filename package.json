@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --project previewer",
+    "start": "ng serve --project previewer --port=4455",
     "build": "ng run solias-components:prodbuild",
     "watch": "ng build --watch --configuration development --project components",
     "build:lib": "ng build --project components",

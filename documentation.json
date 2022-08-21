@@ -78,7 +78,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<solias-button></solias-button>"
+            "templateData": ""
         },
         {
             "name": "AppComponent",
@@ -304,18 +304,80 @@
             "implements": [
                 "OnInit"
             ]
+        },
+        {
+            "name": "NavbarComponent",
+            "id": "component-NavbarComponent-4f0354970f7ee6e75a61b4e1b902db7e669ee832d2c054b8bc0cbe53e9052c1853b6d21e10626ccd540797697c8d6a96615156f364f47111048befecda75936a",
+            "file": "projects/components/src/lib/navbar/navbar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "solias-navbar",
+            "styleUrls": [
+                "./navbar.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./navbar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'solias-navbar',\n  templateUrl: './navbar.component.html',\n  styleUrls: ['./navbar.component.css']\n})\nexport class NavbarComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./navbar.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<nav class=\"solias-navbar\">\n  <div class=\"solias-navbar__logo\">\n    <ng-content select=\".title\"></ng-content>\n  </div>\n</nav>\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-e03a0fad2fd748110a9a8b76b8218750ca05aee85813532d8f04338284750420d82097aca748d6ad9433362e4fdbd3946d9a18655096e2a8bbd8b3f86bd14796",
+            "id": "module-AppModule-d1e97f473e9718600a109f126db5a2c195a9b7d74dcc762249544527809a52c0da1b52a2fd69c6f58fa8281159fbbcd361ac0d5d071ba0250f39d3ba60fd2707",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/previewer/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { ComponentsModule } from 'components';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    ComponentsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -437,13 +499,13 @@
         },
         {
             "name": "ComponentsModule",
-            "id": "module-ComponentsModule-d2ad16edf3964bc38694a379a87741ae3cd992f4fbdbfdc108806d202b35de865695d4d3bb8f53a8c4a8f4f41270d69abe255f54799c837b5e80c6eb3447f291",
+            "id": "module-ComponentsModule-dd283800a165beb4bb0f954b610eaa59dd089ad692a416babcaddf86255c1e98ee82d98f1620d1c1f54c52e371a8b4d1d17479114ca3bb0995aa0a0af498b6ed",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/components/src/lib/components.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { ComponentsComponent } from './components.component';\nimport { ButtonComponent } from './button/button.component';\n\n\n\n@NgModule({\n  declarations: [\n    ComponentsComponent,\n    ButtonComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    ButtonComponent\n  ]\n})\nexport class ComponentsModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { ComponentsComponent } from './components.component';\nimport { ButtonComponent } from './button/button.component';\nimport { NavbarComponent } from './navbar/navbar.component';\n\n\n\n@NgModule({\n  declarations: [\n    ComponentsComponent,\n    ButtonComponent,\n    NavbarComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    ButtonComponent\n  ]\n})\nexport class ComponentsModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -457,6 +519,9 @@
                         },
                         {
                             "name": "ComponentsComponent"
+                        },
+                        {
+                            "name": "NavbarComponent"
                         }
                     ]
                 },
@@ -489,7 +554,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/components/src/test.ts",
+                "file": "projects/previewer/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -499,7 +564,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/previewer/src/test.ts",
+                "file": "projects/components/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -539,6 +604,16 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/solias-components/src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/solias-components/src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -546,14 +621,14 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
-                "name": "environment",
+                "name": "navTitle",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/solias-components/src/environments/environment.prod.ts",
+                "file": "stories/Navbar.s.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
+                "type": "",
+                "defaultValue": "`<h1 class=\"title\">Solias</h1>`"
             },
             {
                 "name": "Primary",
@@ -569,7 +644,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/components/src/test.ts",
+                "file": "projects/previewer/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -578,7 +653,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/previewer/src/test.ts",
+                "file": "projects/components/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -591,6 +666,26 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
+            },
+            {
+                "name": "Standard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Navbar.s.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Navbar.s.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NavbarComponent>",
+                "defaultValue": "(args: NavbarComponent) => ({\r\n    props: args,\r\n    template: `<solias-navbar>\r\n    ${navTitle}\r\n    </solias-navbar>`\r\n})"
             },
             {
                 "name": "Template",
@@ -607,27 +702,6 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "projects/components/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/components/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/components/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "literal type"
-                }
-            ],
             "projects/previewer/src/test.ts": [
                 {
                     "name": "context",
@@ -644,6 +718,27 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/previewer/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "projects/components/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/components/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/components/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
@@ -694,6 +789,18 @@
                     "defaultValue": "{\n  production: false\n}"
                 }
             ],
+            "projects/solias-components/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/solias-components/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
             "projects/solias-components/src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -706,16 +813,36 @@
                     "defaultValue": "{\n  production: false\n}"
                 }
             ],
-            "projects/solias-components/src/environments/environment.prod.ts": [
+            "stories/Navbar.s.ts": [
                 {
-                    "name": "environment",
+                    "name": "navTitle",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/solias-components/src/environments/environment.prod.ts",
+                    "file": "stories/Navbar.s.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
+                    "type": "",
+                    "defaultValue": "`<h1 class=\"title\">Solias</h1>`"
+                },
+                {
+                    "name": "Standard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Navbar.s.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Navbar.s.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NavbarComponent>",
+                    "defaultValue": "(args: NavbarComponent) => ({\r\n    props: args,\r\n    template: `<solias-navbar>\r\n    ${navTitle}\r\n    </solias-navbar>`\r\n})"
                 }
             ],
             "stories/Button.stories.ts": [
@@ -788,6 +915,15 @@
                 "name": "ComponentsService",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/components/src/lib/navbar/navbar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavbarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -920,6 +1056,36 @@
             },
             {
                 "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Navbar.s.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "navTitle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Navbar.s.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Standard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Navbar.s.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

@@ -4,7 +4,7 @@ import { ButtonComponent } from '../projects/components/src/lib/button/button.co
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Button',
+  title: 'Atoms/Button',
   component: ButtonComponent,
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
   argTypes: {
