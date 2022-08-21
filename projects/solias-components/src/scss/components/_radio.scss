@@ -17,14 +17,30 @@
                 width: 22px;
                 border: 2px solid var(--md-sys-color-primary);
                 border-radius: 15px;
-                background-color: var(--md-sys-color-on-primary);
+                background-color: var(--md-sys-color-background);
             }
         }
         &:checked {
             & + label {
                 &:before {
                     background-color: var(--md-sys-color-primary);
-                    box-shadow: inset 0 0 0 4px var(--md-sys-color-on-primary);
+                    box-shadow: inset 0 0 0 4px var(--md-sys-color-background);
+                }
+            }
+            &:disabled {
+                & + label {
+                    &:before {
+                        background-color: var(--md-sys-color-surface-variant);
+                    }
+                }
+            }
+        }
+        &:disabled {
+            & + label {
+                cursor: not-allowed;
+                color: var(--md-sys-color-surface-variant);
+                &:before {
+                    border-color: var(--md-sys-color-surface-variant);
                 }
             }
         }

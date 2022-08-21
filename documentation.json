@@ -78,7 +78,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": ""
+            "templateData": "<div _ngcontent-rbt-c43=\"\" class=\"solias-checkbox\">\r\n  <input\r\n    _ngcontent-rbt-c43=\"\"\r\n    type=\"checkbox\"\r\n    name=\"checkbox-1\"\r\n    id=\"checkbox-1\"\r\n  />\r\n  <label _ngcontent-rbt-c43=\"\" for=\"checkbox-1\">Checkboxs</label>\r\n</div>\r\n"
         },
         {
             "name": "AppComponent",
@@ -329,7 +329,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"solias-checkbox\">\n    <input type=\"checkbox\" [name]=\"id\" [id]=\"id\">\n    <label [for]=\"id\">{{label}}</label>\n</div>\n"
+            "templateData": "<div class=\"solias-checkbox\">\n    <input type=\"checkbox\" [name]=\"id\" [id]=\"id\">\n    <label [for]=\"id\">{{label}}</label>\n    <span></span>\n</div>"
         },
         {
             "name": "ComponentsComponent",
@@ -614,6 +614,200 @@
                 "OnInit"
             ],
             "templateData": "<nav class=\"solias-navbar\">\n  <div class=\"solias-navbar__logo\">\n    <ng-content select=\".title\"></ng-content>\n  </div>\n</nav>\n"
+        },
+        {
+            "name": "RadioComponent",
+            "id": "component-RadioComponent-720f6d8d8d3b5f65995d7b7f14f11cc20bc8948e757e9b4f5d2928710e665494476e43893ab5fdb6f9bf886b1267fa5a25c9e530bd9a345c95b979b89dba500e",
+            "file": "projects/components/src/lib/radio/radio.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "solias-radio",
+            "styleUrls": [
+                "./radio.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./radio.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'solias-radio',\n  templateUrl: './radio.component.html',\n  styleUrls: ['./radio.component.css']\n})\nexport class RadioComponent implements OnInit {\n\n  @Input() label!: string;\n\n  @Input() id!: string;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./radio.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 12
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"solias-radio\">\n    <input type=\"radio\" [name]=\"id\" [id]=\"id\">\n    <label [for]=\"id\">{{label}}</label>\n</div>\n"
+        },
+        {
+            "name": "TextareaComponent",
+            "id": "component-TextareaComponent-e1e0424a496e82ec11394b38244f2af31bcaea044d1686c249cca399a5eb6c1cb0fdfaf30810197dbfe774b652d238f4608651ce9df8f14f2a01951ecd26c59b",
+            "file": "projects/components/src/lib/textarea/textarea.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "solias-textarea",
+            "styleUrls": [
+                "./textarea.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./textarea.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "cols",
+                    "defaultValue": "30",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "isDisabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "isReadOnly",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "rows",
+                    "defaultValue": "10",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 24,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'solias-textarea',\n  templateUrl: './textarea.component.html',\n  styleUrls: ['./textarea.component.css']\n})\nexport class TextareaComponent implements OnInit {\n\n  @Input() name!: string;\n\n  @Input() cols: number = 30;\n\n  @Input() rows: number = 10;\n\n  @Input() placeholder!: string;\n\n  @Input() isDisabled: boolean = false;\n\n  @Input() isReadOnly: boolean = false;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./textarea.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 20
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<textarea [name]=\"name\" [cols]=\"cols\" [rows]=\"rows\" class=\"solias-textarea\" [placeholder]=\"placeholder\" [disabled]=\"isDisabled\" [readonly]=\"isReadOnly\"></textarea>\n"
         }
     ],
     "modules": [
@@ -747,13 +941,13 @@
         },
         {
             "name": "ComponentsModule",
-            "id": "module-ComponentsModule-16369c822f1e4a4c041bf443a2d5d38f57ba2430ecde9543cf71b8b6e10517113721bceffa66b14b8e053aa1c5de29513bcc963b75d6c59a330d40ad49535f25",
+            "id": "module-ComponentsModule-1df6e6be9889fb406dee69e2ee451c0a83a01fd109a456052fc9e66e8d6b014937011b2a9c45f44cac3fafe110e0c59869ad418894a663516e09d2599a6c394f",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/components/src/lib/components.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { ComponentsComponent } from './components.component';\nimport { ButtonComponent } from './button/button.component';\nimport { NavbarComponent } from './navbar/navbar.component';\nimport { LabelComponent } from './label/label.component';\nimport { InputComponent } from './input/input.component';\nimport { CheckboxComponent } from './checkbox/checkbox.component';\n\n\n\n@NgModule({\n  declarations: [\n    ComponentsComponent,\n    ButtonComponent,\n    NavbarComponent,\n    LabelComponent,\n    InputComponent,\n    CheckboxComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    ButtonComponent\n  ]\n})\nexport class ComponentsModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { ComponentsComponent } from './components.component';\nimport { ButtonComponent } from './button/button.component';\nimport { NavbarComponent } from './navbar/navbar.component';\nimport { LabelComponent } from './label/label.component';\nimport { InputComponent } from './input/input.component';\nimport { CheckboxComponent } from './checkbox/checkbox.component';\nimport { RadioComponent } from './radio/radio.component';\nimport { TextareaComponent } from './textarea/textarea.component';\n\n\n\n@NgModule({\n  declarations: [\n    ComponentsComponent,\n    ButtonComponent,\n    NavbarComponent,\n    LabelComponent,\n    InputComponent,\n    CheckboxComponent,\n    RadioComponent,\n    TextareaComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    ButtonComponent\n  ]\n})\nexport class ComponentsModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -779,6 +973,12 @@
                         },
                         {
                             "name": "NavbarComponent"
+                        },
+                        {
+                            "name": "RadioComponent"
+                        },
+                        {
+                            "name": "TextareaComponent"
                         }
                     ]
                 },
@@ -958,7 +1158,27 @@
                 "name": "Standard",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/Radio.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Standard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/Navbar.s.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Standard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Textarea.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1008,11 +1228,31 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/Radio.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<RadioComponent>",
+                "defaultValue": "(args: RadioComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/Navbar.s.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<NavbarComponent>",
                 "defaultValue": "(args: NavbarComponent) => ({\r\n    props: args,\r\n    template: `<solias-navbar>\r\n    ${navTitle}\r\n    </solias-navbar>`\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Textarea.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TextareaComponent>",
+                "defaultValue": "(args: TextareaComponent) => ({\r\n    props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -1249,6 +1489,50 @@
                     "type": "Story<LabelComponent>",
                     "defaultValue": "(args: LabelComponent) => ({\r\n  props: args,\r\n})"
                 }
+            ],
+            "stories/Radio.stories.ts": [
+                {
+                    "name": "Standard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Radio.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Radio.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<RadioComponent>",
+                    "defaultValue": "(args: RadioComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/Textarea.stories.ts": [
+                {
+                    "name": "Standard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Textarea.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Textarea.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TextareaComponent>",
+                    "defaultValue": "(args: TextareaComponent) => ({\r\n    props: args,\r\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -1334,6 +1618,24 @@
                 "name": "NavbarComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/components/src/lib/radio/radio.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "RadioComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/components/src/lib/textarea/textarea.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TextareaComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -1516,6 +1818,46 @@
             },
             {
                 "filePath": "stories/Navbar.s.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Radio.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Standard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Radio.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Textarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Standard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Textarea.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

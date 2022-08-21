@@ -27,6 +27,16 @@ export default {
                 },
             },
             control: 'text'
+        },
+        isDisabled: {
+            name: 'Disabled',
+            description: 'Disable',
+            defaultValue: 10,
+            tabel: {
+                summary: 'Disabled',
+                description: 'boolean',
+            },
+            control: 'boolean'
         }
     }
 } as Meta;

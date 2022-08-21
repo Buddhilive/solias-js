@@ -13,6 +13,8 @@ export class ButtonComponent implements OnInit {
 
   @Output() onClick: EventEmitter<Event> = new EventEmitter();
 
+  @Input() isDisabled: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

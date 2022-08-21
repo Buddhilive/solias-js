@@ -12,9 +12,9 @@ export default {
       name: 'Label',
       description: 'Button label',
       table: {
-        type: { 
-          summary: 'Button label', 
-          detail: 'text' 
+        type: {
+          summary: 'Button label',
+          detail: 'text'
         },
       },
       control: 'text'
@@ -23,13 +23,23 @@ export default {
       name: 'Button Type',
       description: 'Button type',
       table: {
-        type: { 
-          summary: 'Type of the button', 
-          detail: `'primary', 'secondary', 'danger'` 
+        type: {
+          summary: 'Type of the button',
+          detail: `'primary', 'secondary', 'danger'`
         },
       },
       control: 'select',
       options: ['primary', 'secondary', 'danger']
+    },
+    isDisabled: {
+      name: 'Disabled',
+      description: 'Disable',
+      defaultValue: 10,
+      tabel: {
+        summary: 'Disabled',
+        description: 'boolean',
+      },
+      control: 'boolean'
     },
     onClick: {
       description: 'Click Event',

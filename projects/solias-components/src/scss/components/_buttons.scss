@@ -28,4 +28,9 @@
             background-color: var(--md-sys-color-on-error-container);
         }
     }
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--md-sys-color-surface-variant);
+        color: var(--md-sys-color-on-surface-variant);
+    }
 }

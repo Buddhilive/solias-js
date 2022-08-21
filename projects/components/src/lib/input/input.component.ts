@@ -14,6 +14,10 @@ export class InputComponent implements OnInit {
   @Input() value!: string;
 
   @Input() name!: string;
+  
+  @Input() isDisabled: boolean = false;
+
+  @Input() isReadOnly: boolean = false;
 
   constructor() { }
 

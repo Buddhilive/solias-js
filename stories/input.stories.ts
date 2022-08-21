@@ -30,6 +30,26 @@ export default {
                 },
             },
             control: 'text',
+        },
+        isDisabled: {
+            name: 'Disabled',
+            description: 'Disable',
+            defaultValue: 10,
+            tabel: {
+                summary: 'Disabled',
+                description: 'boolean',
+            },
+            control: 'boolean'
+        },
+        isReadOnly: {
+            name: 'Read Only',
+            description: 'Read only',
+            defaultValue: 10,
+            tabel: {
+                summary: 'Read Only',
+                description: 'boolean',
+            },
+            control: 'boolean'
         }
     }
 } as Meta;

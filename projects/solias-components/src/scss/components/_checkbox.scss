@@ -37,6 +37,25 @@
                     transform: rotate(45deg);
                 }
             }
+            &:disabled {
+                & + label {
+                    &:before {
+                        background-color: var(--md-sys-color-surface-variant);
+                    }
+                    & + span {
+                        border-color: var(--md-sys-color-on-surface-variant);
+                    }
+                }
+            }
+        }
+        &:disabled {
+            & + label {
+                cursor: not-allowed;
+                color: var(--md-sys-color-surface-variant);
+                &:before {
+                    border-color: var(--md-sys-color-surface-variant);
+                }
+            }
         }
     }
 }
