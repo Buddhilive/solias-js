@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { InputComponent } from '../projects/components/src/lib/input/input.component';
 
 export default {
-    title: 'Atoms/Inputs',
+    title: 'Components/Inputs',
     component: InputComponent,
 
     argTypes: {

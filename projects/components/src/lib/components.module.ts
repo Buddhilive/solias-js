@@ -5,6 +5,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LabelComponent } from './label/label.component';
 import { InputComponent } from './input/input.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { RadioComponent } from './radio/radio.component';
+import { TextareaComponent } from './textarea/textarea.component';
 
 
 
@@ -15,7 +17,9 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     NavbarComponent,
     LabelComponent,
     InputComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    RadioComponent,
+    TextareaComponent
   ],
   imports: [
   ],

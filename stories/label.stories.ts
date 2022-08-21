@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { LabelComponent } from '../projects/components/src/lib/label/label.component';
 
 export default {
-    title: 'Atoms/Label',
+    title: 'Components/Label',
     component: LabelComponent,
 
     argTypes: {
