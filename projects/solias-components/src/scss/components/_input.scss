@@ -1,0 +1,14 @@
+.#{$prefix}-input {
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5rem;
+    color: var(--md-sys-color-on-background);
+    padding: 4px 8px;
+    max-width: 100%;
+    min-width: 150px;
+    &:focus-visible {
+        outline: 2px solid var(--md-sys-color-primary);
+        border: transparent;
+    }
+}
