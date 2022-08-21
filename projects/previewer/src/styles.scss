@@ -1,6 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
-solias-button{
-    button{
-        background-color: red;
-    }
-}
+@import '../../solias-components/src/styles.scss';

@@ -136,7 +136,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-8610011907f42b2384d071171a9235e092ed196c22f1b9172397f6065f32421113e4c70843bc6e5c50f00e94c6606e629c7c87745a77f65882e2d9af616dec1e",
+            "id": "component-ButtonComponent-a715289acc0bfcd25b6480dd394bcce4ee97cc3720009cbb7bce9822ce6574f44666db6d6326a3d50bc606a1d9e510a922b4b95275f14144d62f348cb8567713",
             "file": "projects/components/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -168,7 +168,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 12,
-                    "type": "string",
+                    "type": "\"primary\" | \"secondary\" | \"danger\"",
                     "decorators": []
                 }
             ],
@@ -230,7 +230,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\n@Component({\n  selector: 'solias-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.css']\n})\nexport class ButtonComponent implements OnInit {\n\n  @Input() label: string = 'Button';\n\n  @Input() type: string = 'primary';\n\n  @Output() onClick: EventEmitter<Event> = new EventEmitter();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  clickEvent(event: Event | undefined) {\n    this.onClick.emit(event);\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\n@Component({\n  selector: 'solias-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.css']\n})\nexport class ButtonComponent implements OnInit {\n\n  @Input() label: string = 'Button';\n\n  @Input() type: 'primary' | 'secondary' | 'danger' = 'primary';\n\n  @Output() onClick: EventEmitter<Event> = new EventEmitter();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  clickEvent(event: Event | undefined) {\n    this.onClick.emit(event);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -251,6 +251,85 @@
                 "OnInit"
             ],
             "templateData": "<button class=\"solias-btn solias-btn__{{type}}\" (click)=\"clickEvent($event)\">{{label}}</button>\n"
+        },
+        {
+            "name": "CheckboxComponent",
+            "id": "component-CheckboxComponent-6e84a01a3bfd37dc7596cacd089959b1b5b8c6277c6061121fa9912363e19800ba7a6d38038a0784477b1ebb5e5d646b14321ee22792e85f621efdec4f52a737",
+            "file": "projects/components/src/lib/checkbox/checkbox.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "solias-checkbox",
+            "styleUrls": [
+                "./checkbox.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./checkbox.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'solias-checkbox',\n  templateUrl: './checkbox.component.html',\n  styleUrls: ['./checkbox.component.css']\n})\nexport class CheckboxComponent implements OnInit {\n\n  @Input() label!: string;\n\n  @Input() id!: string;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./checkbox.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 12
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"solias-checkbox\">\n    <input type=\"checkbox\" [name]=\"id\" [id]=\"id\">\n    <label [for]=\"id\">{{label}}</label>\n</div>\n"
         },
         {
             "name": "ComponentsComponent",
@@ -304,6 +383,175 @@
             "implements": [
                 "OnInit"
             ]
+        },
+        {
+            "name": "InputComponent",
+            "id": "component-InputComponent-fcd26b4cc37a979336b5aceda2355c726391589c8a0632907a38349e686975eeff15494576c5bc02a66523260d778554012b0c8ebd467bef6a863acda951abe1",
+            "file": "projects/components/src/lib/input/input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "solias-input",
+            "styleUrls": [
+                "./input.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "\"email\" | \"number\" | \"password\" | \"tel\" | \"text\"",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'solias-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.css']\n})\nexport class InputComponent implements OnInit {\n\n  @Input() type: 'email' | 'number' | 'password' | 'tel' | 'text' = 'text';\n\n  @Input() placeholder: string = '';\n\n  @Input() value!: string;\n\n  @Input() name!: string;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 16
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<input [type]=\"type\" class=\"solias-input\" [placeholder]=\"placeholder\" [value]=\"!value ? '' : value\" [name]=\"!name ? '' : name\"/>\n"
+        },
+        {
+            "name": "LabelComponent",
+            "id": "component-LabelComponent-ac035b399011f6201f44d86caffaa9583cbb336ee47479807188f40bb96a156a74fdf5816ceb27b77d9a1eab49aaf805e5ad211a1fc521fa08efa12e7c9ab56d",
+            "file": "projects/components/src/lib/label/label.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "solias-label",
+            "styleUrls": [
+                "./label.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./label.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "text",
+                    "defaultValue": "'Label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'solias-label',\n  templateUrl: './label.component.html',\n  styleUrls: ['./label.component.css']\n})\nexport class LabelComponent implements OnInit {\n\n  @Input() text: string = 'Label';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./label.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 10
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<label class=\"solias-label\">{{text}}</label>\n"
         },
         {
             "name": "NavbarComponent",
@@ -499,13 +747,13 @@
         },
         {
             "name": "ComponentsModule",
-            "id": "module-ComponentsModule-dd283800a165beb4bb0f954b610eaa59dd089ad692a416babcaddf86255c1e98ee82d98f1620d1c1f54c52e371a8b4d1d17479114ca3bb0995aa0a0af498b6ed",
+            "id": "module-ComponentsModule-16369c822f1e4a4c041bf443a2d5d38f57ba2430ecde9543cf71b8b6e10517113721bceffa66b14b8e053aa1c5de29513bcc963b75d6c59a330d40ad49535f25",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/components/src/lib/components.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { ComponentsComponent } from './components.component';\nimport { ButtonComponent } from './button/button.component';\nimport { NavbarComponent } from './navbar/navbar.component';\n\n\n\n@NgModule({\n  declarations: [\n    ComponentsComponent,\n    ButtonComponent,\n    NavbarComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    ButtonComponent\n  ]\n})\nexport class ComponentsModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { ComponentsComponent } from './components.component';\nimport { ButtonComponent } from './button/button.component';\nimport { NavbarComponent } from './navbar/navbar.component';\nimport { LabelComponent } from './label/label.component';\nimport { InputComponent } from './input/input.component';\nimport { CheckboxComponent } from './checkbox/checkbox.component';\n\n\n\n@NgModule({\n  declarations: [\n    ComponentsComponent,\n    ButtonComponent,\n    NavbarComponent,\n    LabelComponent,\n    InputComponent,\n    CheckboxComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    ButtonComponent\n  ]\n})\nexport class ComponentsModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -518,7 +766,16 @@
                             "name": "ButtonComponent"
                         },
                         {
+                            "name": "CheckboxComponent"
+                        },
+                        {
                             "name": "ComponentsComponent"
+                        },
+                        {
+                            "name": "InputComponent"
+                        },
+                        {
+                            "name": "LabelComponent"
                         },
                         {
                             "name": "NavbarComponent"
@@ -554,7 +811,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/previewer/src/test.ts",
+                "file": "projects/components/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -564,7 +821,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/components/src/test.ts",
+                "file": "projects/previewer/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -644,7 +901,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/previewer/src/test.ts",
+                "file": "projects/components/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -653,7 +910,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/components/src/test.ts",
+                "file": "projects/previewer/src/test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
@@ -671,6 +928,36 @@
                 "name": "Standard",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/Checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Standard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Standard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/label.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Standard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/Navbar.s.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -681,48 +968,57 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Navbar.s.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<NavbarComponent>",
-                "defaultValue": "(args: NavbarComponent) => ({\r\n    props: args,\r\n    template: `<solias-navbar>\r\n    ${navTitle}\r\n    </solias-navbar>`\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ButtonComponent>",
                 "defaultValue": "(args: ButtonComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CheckboxComponent>",
+                "defaultValue": "(args: CheckboxComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputComponent>",
+                "defaultValue": "(args: InputComponent) => ({\r\n    props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/label.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<LabelComponent>",
+                "defaultValue": "(args: LabelComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Navbar.s.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NavbarComponent>",
+                "defaultValue": "(args: NavbarComponent) => ({\r\n    props: args,\r\n    template: `<solias-navbar>\r\n    ${navTitle}\r\n    </solias-navbar>`\r\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "projects/previewer/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/previewer/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/previewer/src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "literal type"
-                }
-            ],
             "projects/components/src/test.ts": [
                 {
                     "name": "context",
@@ -739,6 +1035,27 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/components/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "projects/previewer/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/previewer/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/previewer/src/test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
@@ -866,6 +1183,72 @@
                     "type": "Story<ButtonComponent>",
                     "defaultValue": "(args: ButtonComponent) => ({\n  props: args,\n})"
                 }
+            ],
+            "stories/Checkbox.stories.ts": [
+                {
+                    "name": "Standard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CheckboxComponent>",
+                    "defaultValue": "(args: CheckboxComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/input.stories.ts": [
+                {
+                    "name": "Standard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputComponent>",
+                    "defaultValue": "(args: InputComponent) => ({\r\n    props: args,\r\n})"
+                }
+            ],
+            "stories/label.stories.ts": [
+                {
+                    "name": "Standard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/label.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/label.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<LabelComponent>",
+                    "defaultValue": "(args: LabelComponent) => ({\r\n  props: args,\r\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -900,6 +1283,15 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/components/src/lib/checkbox/checkbox.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CheckboxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/components/src/lib/components.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -915,6 +1307,24 @@
                 "name": "ComponentsService",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/components/src/lib/input/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/components/src/lib/label/label.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LabelComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -1065,6 +1475,26 @@
                 "status": "low"
             },
             {
+                "filePath": "stories/Checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Standard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "stories/Navbar.s.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -1086,6 +1516,46 @@
             },
             {
                 "filePath": "stories/Navbar.s.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Standard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/label.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Standard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/label.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

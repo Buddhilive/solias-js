@@ -4,6 +4,7 @@ import { ButtonComponent } from './button/button.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LabelComponent } from './label/label.component';
 import { InputComponent } from './input/input.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 
 
@@ -13,7 +14,8 @@ import { InputComponent } from './input/input.component';
     ButtonComponent,
     NavbarComponent,
     LabelComponent,
-    InputComponent
+    InputComponent,
+    CheckboxComponent
   ],
   imports: [
   ],
