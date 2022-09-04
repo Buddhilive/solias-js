@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'previewer';
+
+  clickMe(e: any) {
+    console.log('Click Triggered', e);
+  }
 }

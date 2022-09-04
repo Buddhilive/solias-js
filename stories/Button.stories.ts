@@ -60,4 +60,4 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Primary.args = {
   label: 'Button'
-};
+} as Partial<ButtonComponent>;
