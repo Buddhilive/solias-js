@@ -25,16 +25,16 @@ export default {
       table: {
         type: {
           summary: 'Type of the button',
-          detail: `'primary', 'secondary', 'danger'`
+          detail: `'primary', 'secondary', 'success' , 'warning' , 'danger'`
         },
       },
       control: 'select',
-      options: ['primary', 'secondary', 'danger']
+      options: ['primary', 'secondary', 'success', 'warning','danger']
     },
     isDisabled: {
       name: 'Disabled',
       description: 'Disable',
-      defaultValue: 10,
+      defaultValue: false,
       tabel: {
         summary: 'Disabled',
         description: 'boolean',

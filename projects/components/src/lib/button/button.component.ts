@@ -9,7 +9,7 @@ export class ButtonComponent implements OnInit {
 
   @Input() label: string = 'Button';
 
-  @Input() type: 'primary' | 'secondary' | 'danger' = 'primary';
+  @Input() type: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' = 'primary';
 
   @Output() onClick: EventEmitter<Event> = new EventEmitter();
 
