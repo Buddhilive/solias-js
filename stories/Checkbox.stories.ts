@@ -31,7 +31,7 @@ export default {
         isDisabled: {
             name: 'Disabled',
             description: 'Disable',
-            defaultValue: 10,
+            defaultValue: false,
             tabel: {
                 summary: 'Disabled',
                 description: 'boolean',
