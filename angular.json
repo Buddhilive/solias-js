@@ -129,9 +129,12 @@
               "projects/previewer/src/assets"
             ],
             "styles": [
-              "projects/previewer/src/styles.scss"
+              "projects/previewer/src/styles.scss",
+              "build/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "build/elements.js"
+            ]
           },
           "configurations": {
             "production": {
