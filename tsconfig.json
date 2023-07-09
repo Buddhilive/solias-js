@@ -6,6 +6,9 @@
     "paths": {
       "components": [
         "dist/components"
+      ],
+      "ng-native-dialog": [
+        "dist/ng-native-dialog"
       ]
     },
     "outDir": "./dist/out-tsc",

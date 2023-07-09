@@ -250,6 +250,37 @@
           }
         }
       }
+    },
+    "ng-native-dialog": {
+      "projectType": "library",
+      "root": "projects/ng-native-dialog",
+      "sourceRoot": "projects/ng-native-dialog/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-native-dialog/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-native-dialog/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-native-dialog/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-native-dialog/src/test.ts",
+            "tsConfig": "projects/ng-native-dialog/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-native-dialog/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  @ViewChild('dialogElement') dialogElement!: ElementRef;
+
   title = 'previewer';
 
   clickMe(e: any) {
-    console.log('Click Triggered', e);
+    console.log('Click Triggered', e, this.dialogElement);
+    this.dialogElement.nativeElement.showModal();
   }
 }

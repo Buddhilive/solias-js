@@ -1,0 +1,10 @@
+.dialog {
+    width: 50vw;
+    height: 60vh;
+    border: none;
+    border-radius: 4px;
+    &::backdrop {
+        background-color: #e5e5ee;
+        opacity: 0.5;
+    }
+}
