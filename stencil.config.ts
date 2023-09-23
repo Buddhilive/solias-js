@@ -22,5 +22,6 @@ export const config: Config = {
   testing: {
     browserHeadless: "new",
   },
+  globalStyle: 'styles/base.scss',
   plugins: [sass()]
 };
