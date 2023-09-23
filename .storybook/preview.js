@@ -1,6 +1,8 @@
 /** @type { import('@storybook/html').Preview } */
 import {defineCustomElements} from '../loader';
 
+import '../dist/solias/solias.css';
+
 defineCustomElements();
 
 const preview = {

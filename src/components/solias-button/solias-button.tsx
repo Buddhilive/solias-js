@@ -15,7 +15,7 @@ export class SoliasButton {
 
   render() {
     return (
-      <button>{this.label}</button>
+      <button class="solias-button">{this.label}</button>
     );
   }
 
