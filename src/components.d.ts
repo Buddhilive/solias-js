@@ -20,6 +20,12 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SoliasButton {
+        /**
+          * Button Label
+         */
+        "label": string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +34,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSoliasButtonElement extends Components.SoliasButton, HTMLStencilElement {
+    }
+    var HTMLSoliasButtonElement: {
+        prototype: HTMLSoliasButtonElement;
+        new (): HTMLSoliasButtonElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "solias-button": HTMLSoliasButtonElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +60,15 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SoliasButton {
+        /**
+          * Button Label
+         */
+        "label"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "solias-button": SoliasButton;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +76,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "solias-button": LocalJSX.SoliasButton & JSXBase.HTMLAttributes<HTMLSoliasButtonElement>;
         }
     }
 }
