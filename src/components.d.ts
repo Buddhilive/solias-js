@@ -11,6 +11,10 @@ export namespace Components {
           * Button Label
          */
         "label": string;
+        /**
+          * Button custom class
+         */
+        "styleClass": string;
     }
 }
 declare global {
@@ -30,6 +34,10 @@ declare namespace LocalJSX {
           * Button Label
          */
         "label"?: string;
+        /**
+          * Button custom class
+         */
+        "styleClass"?: string;
     }
     interface IntrinsicElements {
         "solias-button": SoliasButton;

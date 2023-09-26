@@ -13,9 +13,14 @@ export class SoliasButton {
    */
   @Prop() label: string;
 
+  /** 
+   * Button custom class
+  */
+  @Prop() styleClass: string;
+
   render() {
     return (
-      <button class="solias-button">{this.label}</button>
+      <button class={this.styleClass}>{this.label}</button>
     );
   }
 
