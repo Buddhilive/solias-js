@@ -16,7 +16,7 @@ export class SoliasButton {
   /** 
    * Button custom class
   */
-  @Prop() styleClass: string;
+  @Prop() styleClass: string = 'solias-button';
 
   render() {
     return (
