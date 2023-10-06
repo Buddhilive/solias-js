@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description   | Type     | Default     |
-| -------- | --------- | ------------- | -------- | ----------- |
-| `label`  | `label`   |  Button Label | `string` | `undefined` |
+| Property     | Attribute     | Description         | Type     | Default           |
+| ------------ | ------------- | ------------------- | -------- | ----------------- |
+| `label`      | `label`       |  Button Label       | `string` | `undefined`       |
+| `styleClass` | `style-class` | Button custom class | `string` | `'solias-button'` |
 
 
 ----------------------------------------------
