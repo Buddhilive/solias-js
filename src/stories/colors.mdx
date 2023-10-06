@@ -1,5 +1,4 @@
-import { Meta } from "@storybook/blocks";
-
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
 
 <Meta title="Color Palette" />
 
@@ -8,5 +7,45 @@ import { Meta } from "@storybook/blocks";
     # Color Palette
 
     This is color Palette.
+
   </div>
+
+<div className="sb-color-palette">
+
+## Light Theme
+
+  <ColorPalette>
+    <ColorItem
+      title="Primary"
+      subtitle="Primary color"
+      colors={{
+        "Primary": '#005cba',
+        "On Primary": '#ffffff',
+        "Primary Container": '#d7e3ff',
+        "On Primary Container": '#001b3e'
+      }}
+    />
+    <ColorItem
+      title="Secondary"
+      subtitle="Secondary color"
+      colors={{
+        "Secondary": '#565E71',
+        "On Secondary": '#ffffff',
+        "Secondary Container": '#DAE2F9',
+        "On Secondary Container": '#131C2B'
+      }}
+    />
+    <ColorItem
+      title="Tertiary"
+      subtitle="Tertiary color"
+      colors={{
+        "Tertiary": '#006e2e',
+        "On Tertiary": '#ffffff',
+        "Tertiary Container": '#9AF7A7',
+        "On Tertiary Container": '#002109'
+      }}
+    />
+  </ColorPalette>
+</div>
+
 </div>
