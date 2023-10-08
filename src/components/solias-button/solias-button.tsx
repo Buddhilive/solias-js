@@ -27,12 +27,24 @@ export class SoliasButton {
    */
   @Prop() disable: boolean = false;
 
+  /**
+   * Icon Name
+   */
+  @Prop() iconName: string;
+
   render() {
     return (
-      <button class={`solias-btn solias-btn--${this.styleType} ${this.styleClass}`}
+      <button
+        class={`solias-btn solias-btn--${this.styleType} ${this.styleClass}`}
         disabled={this.disable}
       >
-        {this.label}
+        {this.iconName
+          ? <span class="solias-btn__label">
+              <span class="material-symbols-outlined solias-btn__icon">{this.iconName}</span>
+              <span class="solias-btn__text">{this.label}</span>
+            </span>
+          : this.label
+        }
       </button>
     );
   }

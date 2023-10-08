@@ -12,6 +12,10 @@ export namespace Components {
          */
         "disable": boolean;
         /**
+          * Icon Name
+         */
+        "iconName": string;
+        /**
           * Button Label
          */
         "label": string;
@@ -42,6 +46,10 @@ declare namespace LocalJSX {
           * Disables button
          */
         "disable"?: boolean;
+        /**
+          * Icon Name
+         */
+        "iconName"?: string;
         /**
           * Button Label
          */

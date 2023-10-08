@@ -13,17 +13,17 @@
       border: 0;
       &:hover {
         &:not([disabled]) {
-          background-color: rgba($primary-color, 0.8);
+          color: var(--md-sys-color-on-primary);
           @extend %box-shadow;
           @extend %hover-animation;
         }
       }
-      &:focus {
-        background-color: rgba($primary-color, 0.8);
+      &:focus, &:active {
+        color: var(--md-sys-color-on-primary);
       }
       &:disabled {
-        background-color: var(--md-sys-color-on-surface);
-        color: var(--md-sys-color-surface);
+        background-color: rgba($on-surface-color, 0.12);
+        color: rgba($on-surface-color, 0.38);
       }
     }
     &--outlined {
@@ -40,10 +40,12 @@
         background-color: rgba($primary-color, 0.12);
         border-color: var(--md-sys-color-primary);
       }
+      &:active {
+        background-color: rgba($primary-color, 0.12);
+      }
       &:disabled {
-        border: 1px solid var(--md-sys-color-on-surface);
-        color: var(--md-sys-color-on-surface);
-        opacity: 0.12;
+        border: 1px solid rgba($on-surface-color, 0.12);
+        color: rgba($on-surface-color, 0.38);
       }
     }
     &--text {
@@ -57,16 +59,15 @@
           @extend %hover-animation;
         }
       }
-      &:focus {
+      &:focus, &:active {
         background-color: rgba($primary-color, 0.12);
       }
       &:disabled {
-        color: var(--md-sys-color-on-surface);
-        opacity: 0.38;
+        color: rgba($on-surface-color, 0.38);
       }
     }
     &--elevated {
-      background-color: var(--md-sys-color-surface-container-lowest);
+      background-color: var(--md-sys-color-surface-container-low);
       border: none;
       color: var(--md-sys-color-primary);
       box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
@@ -77,13 +78,12 @@
           @extend %hover-animation;
         }
       }
-      &:focus {
-        background-color: var(--md-sys-color-surface-container-low);
+      &:focus, &:active {
+        background-color: rgba($primary-color, 0.12);
       }
       &:disabled {
-        background-color: var(--md-sys-color-surface);
-        color: var(--md-sys-color-on-surface);
-        opacity: 0.8;
+        background-color: rgba($on-surface-color, 0.12);
+        color: rgba($on-surface-color, 0.38);
         box-shadow: none;
       }
     }
@@ -97,14 +97,12 @@
           @extend %hover-animation;
         }
       }
-      &:focus {
-        // background-color: var(--md-sys-color-surface-container-low);
+      &:focus, &:active {
+        /* background-color: rgba($on-secondary-cont-color, 0.2); */
       }
       &:disabled {
-        background-color: var(--md-sys-color-surface);
-        color: var(--md-sys-color-on-surface);
-        opacity: 0.8;
-        box-shadow: none;
+        background-color: rgba($on-surface-color, 0.12);
+        color: rgba($on-surface-color, 0.38);
       }
     }
   }
