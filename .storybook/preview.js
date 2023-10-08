@@ -1,16 +1,20 @@
-import { setCompodocJson } from "@storybook/addon-docs/angular";
-import docJson from "../documentation.json";
-import '../projects/solias-components/src/styles.scss';
-/* import './styles.scss'; */
-setCompodocJson(docJson);
+/** @type { import('@storybook/html').Preview } */
+import {defineCustomElements} from '../loader';
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
+import '../dist/solias/solias.css';
+
+defineCustomElements();
+
+const preview = {
+  parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
     },
   },
-  docs: { inlineStories: true },
-}
+};
+
+export default preview;
