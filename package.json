@@ -1,7 +1,7 @@
 {
   "name": "solias",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "version": "0.0.1-beta.2",
+  "description": "Web Component Library made using StencilJS",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -12,7 +12,7 @@
   "unpkg": "dist/solias/solias.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/Buddhilive/solias"
   },
   "files": [
     "dist/",
@@ -51,5 +51,12 @@
     "storybook": "^7.4.4",
     "storybook-dark-mode": "^3.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "Stenciljs"
+  ],
+  "bugs": {
+    "url": "https://github.com/Buddhilive/solias/issues"
+  },
+  "homepage": "https://solias.buddhilive.com"
 }

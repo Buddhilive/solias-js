@@ -2,6 +2,7 @@
 import {defineCustomElements} from '../loader';
 
 import '../dist/solias/solias.css';
+import SoliasTheme from './SoliasTheme';
 
 defineCustomElements();
 
@@ -12,6 +13,11 @@ const preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/,
+      },
+    },
+    docs: {
+      components: {
+        theme: SoliasTheme
       },
     },
   },
