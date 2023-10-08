@@ -8,6 +8,10 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface SoliasButton {
         /**
+          * Disables button
+         */
+        "disable": boolean;
+        /**
           * Button Label
          */
         "label": string;
@@ -15,6 +19,10 @@ export namespace Components {
           * Button custom class
          */
         "styleClass": string;
+        /**
+          * Button style
+         */
+        "styleType": 'filled' | 'outlined' | 'text' | 'elevated' | 'tonal';
     }
 }
 declare global {
@@ -31,6 +39,10 @@ declare global {
 declare namespace LocalJSX {
     interface SoliasButton {
         /**
+          * Disables button
+         */
+        "disable"?: boolean;
+        /**
           * Button Label
          */
         "label"?: string;
@@ -38,6 +50,10 @@ declare namespace LocalJSX {
           * Button custom class
          */
         "styleClass"?: string;
+        /**
+          * Button style
+         */
+        "styleType"?: 'filled' | 'outlined' | 'text' | 'elevated' | 'tonal';
     }
     interface IntrinsicElements {
         "solias-button": SoliasButton;

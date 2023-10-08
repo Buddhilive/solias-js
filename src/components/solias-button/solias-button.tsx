@@ -8,7 +8,6 @@ import { Component, Prop, h } from '@stencil/core';
 export class SoliasButton {
 
   /**
-   * 
    * Button Label
    */
   @Prop() label: string;
@@ -18,9 +17,23 @@ export class SoliasButton {
   */
   @Prop() styleClass: string = 'solias-button';
 
+  /**
+   * Button style
+   */
+  @Prop() styleType: 'filled' | 'outlined' | 'text' | 'elevated' | 'tonal' = 'filled';
+
+  /**
+   * Disables button
+   */
+  @Prop() disable: boolean = false;
+
   render() {
     return (
-      <button class={this.styleClass}>{this.label}</button>
+      <button class={`solias-btn solias-btn--${this.styleType} ${this.styleClass}`}
+        disabled={this.disable}
+      >
+        {this.label}
+      </button>
     );
   }
 
