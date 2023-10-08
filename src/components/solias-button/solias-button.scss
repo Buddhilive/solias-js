@@ -1,6 +1,7 @@
+$prefix: "solias-btn";
 :host {
   display: flex;
-  .solias-btn {
+  .#{$prefix} {
     font-family: "Poppins";
     font-size: 14px;
     font-weight: 500;
@@ -11,6 +12,9 @@
       background-color: var(--md-sys-color-primary);
       color: var(--md-sys-color-on-primary);
       border: 0;
+      &.#{$prefix}--with-icon {
+        padding: 10px 24px 10px 16px;
+      }
       &:hover {
         &:not([disabled]) {
           color: var(--md-sys-color-on-primary);
@@ -18,7 +22,8 @@
           @extend %hover-animation;
         }
       }
-      &:focus, &:active {
+      &:focus,
+      &:active {
         color: var(--md-sys-color-on-primary);
       }
       &:disabled {
@@ -30,6 +35,9 @@
       background-color: transparent;
       border: 1px solid var(--md-sys-color-outline);
       color: var(--md-sys-color-primary);
+      &.#{$prefix}--with-icon {
+        padding: 10px 24px 10px 16px;
+      }
       &:hover {
         &:not([disabled]) {
           background: rgba($primary-color, 8%);
@@ -53,13 +61,17 @@
       color: var(--md-sys-color-primary);
       padding: 10px 12px;
       border: none;
+      &.#{$prefix}--with-icon {
+        padding: 10px 16px 10px 12px;
+      }
       &:hover {
         &:not([disabled]) {
           background: rgba($primary-color, 8%);
           @extend %hover-animation;
         }
       }
-      &:focus, &:active {
+      &:focus,
+      &:active {
         background-color: rgba($primary-color, 0.12);
       }
       &:disabled {
@@ -70,15 +82,23 @@
       background-color: var(--md-sys-color-surface-container-low);
       border: none;
       color: var(--md-sys-color-primary);
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+      box-shadow:
+        0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+      &.#{$prefix}--with-icon {
+        padding: 10px 24px 10px 16px;
+      }
       &:hover {
         &:not([disabled]) {
           background-color: var(--md-sys-color-surface-container-low);
-          box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+          box-shadow:
+            0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+            0px 1px 2px 0px rgba(0, 0, 0, 0.3);
           @extend %hover-animation;
         }
       }
-      &:focus, &:active {
+      &:focus,
+      &:active {
         background-color: rgba($primary-color, 0.12);
       }
       &:disabled {
@@ -91,19 +111,57 @@
       background-color: var(--md-sys-color-secondary-container);
       color: var(--md-sys-color-on-secondary-container);
       border: none;
+      &.#{$prefix}--with-icon {
+        padding: 10px 24px 10px 16px;
+      }
       &:hover {
         &:not([disabled]) {
           @extend %box-shadow;
           @extend %hover-animation;
         }
       }
-      &:focus, &:active {
+      &:focus,
+      &:active {
         /* background-color: rgba($on-secondary-cont-color, 0.2); */
       }
       &:disabled {
         background-color: rgba($on-surface-color, 0.12);
         color: rgba($on-surface-color, 0.38);
       }
+    }
+    &__label {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    &__text {
+      line-height: 1.5rem;
+    }
+    &__icon {
+      font-family: "Material Icons";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 18px; /* Preferred icon size */
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+
+      /* Support for all WebKit browsers. */
+      -webkit-font-smoothing: antialiased;
+      /* Support for Safari and Chrome. */
+      text-rendering: optimizeLegibility;
+
+      /* Support for Firefox. */
+      -moz-osx-font-smoothing: grayscale;
+
+      /* Support for IE. */
+      font-feature-settings: "liga";
     }
   }
 }
@@ -115,6 +173,6 @@
 
 %box-shadow {
   box-shadow:
-  0px 1px 2px 0px rgba(0, 0, 0, 0.3),
-  0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
 }

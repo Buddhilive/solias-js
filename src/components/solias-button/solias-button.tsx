@@ -35,12 +35,13 @@ export class SoliasButton {
   render() {
     return (
       <button
-        class={`solias-btn solias-btn--${this.styleType} ${this.styleClass}`}
+        class={`solias-btn solias-btn--${this.styleType}
+        ${this.iconName ? ' solias-btn--with-icon': ''} ${this.styleClass}`}
         disabled={this.disable}
       >
         {this.iconName
           ? <span class="solias-btn__label">
-              <span class="material-symbols-outlined solias-btn__icon">{this.iconName}</span>
+              <span class="solias-btn__icon">{this.iconName}</span>
               <span class="solias-btn__text">{this.label}</span>
             </span>
           : this.label
