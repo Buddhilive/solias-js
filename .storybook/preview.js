@@ -1,10 +1,11 @@
 /** @type { import('@storybook/html').Preview } */
-import {defineCustomElements} from '../loader';
+/* import {defineCustomElements} from '../dist/esm/loader'; */
+import '../dist/solias/solias.esm.js';
 
 import '../dist/solias/solias.css';
 import SoliasTheme from './SoliasTheme';
 
-defineCustomElements();
+/* defineCustomElements(); */
 
 const preview = {
   parameters: {

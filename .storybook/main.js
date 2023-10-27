@@ -6,6 +6,12 @@ const config = {
     name: '@storybook/html-vite',
     options: {},
   },
+  core: {
+    builder: {
+      name: '@storybook/builder-vite',
+      options: {}
+    }
+  },
   docs: {
     autodocs: 'tag',
   },
