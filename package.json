@@ -29,17 +29,17 @@
     "watch": "npm run build && npm run storybook"
   },
   "dependencies": {
-    "@stencil/core": "^4.0.0",
-    "vite": "^4.4.9"
+    "@stencil/core": "^4.5.0",
+    "vite": "^4.5.0"
   },
   "devDependencies": {
     "@stencil/sass": "^3.0.5",
-    "@storybook/addon-essentials": "^7.4.4",
-    "@storybook/addon-interactions": "^7.4.4",
-    "@storybook/addon-links": "^7.4.4",
-    "@storybook/blocks": "^7.4.4",
-    "@storybook/html": "^7.4.4",
-    "@storybook/html-vite": "^7.4.4",
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-interactions": "^7.5.1",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/html": "^7.5.1",
+    "@storybook/html-vite": "^7.5.1",
     "@storybook/testing-library": "^0.2.1",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
@@ -48,7 +48,7 @@
     "puppeteer": "21.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.4.4",
+    "storybook": "^7.5.1",
     "storybook-dark-mode": "^3.0.1"
   },
   "license": "MIT",
