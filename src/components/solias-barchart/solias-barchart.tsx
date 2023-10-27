@@ -1,11 +1,10 @@
 import { Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'solias-table',
-  styleUrl: 'solias-table.css',
+  tag: 'solias-barchart',
   shadow: true,
 })
-export class SoliasTable {
+export class SoliasBarchart {
 
   render() {
     return (

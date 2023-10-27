@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { SoliasButton } from '../solias-button';
+import { SoliasBarchart } from '../solias-barchart';
 
-describe('solias-button', () => {
+describe('solias-barchart', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [SoliasButton],
-      html: `<solias-button></solias-button>`,
+      components: [SoliasBarchart],
+      html: `<solias-barchart></solias-barchart>`,
     });
     expect(page.root).toEqualHtml(`
-      <solias-button>
+      <solias-barchart>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </solias-button>
+      </solias-barchart>
     `);
   });
 });
