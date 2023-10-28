@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `data`   | `data`    | Input data  | `string` | `undefined` |
+| Property  | Attribute | Description   | Type                     | Default     |
+| --------- | --------- | ------------- | ------------------------ | ----------- |
+| `data`    | --        | Input data    | `SoliasDefaultChartData` | `undefined` |
+| `options` | --        | Chart Options | `SoliasChartOptions`     | `undefined` |
 
 
 ----------------------------------------------
