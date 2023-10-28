@@ -9,8 +9,8 @@ function loadSimpleBarchart() {
         const refElement = document.getElementsByTagName('solias-barchart');
         refElement[0].data = cities;
         refElement[0].options = {
-            height: 300,
-            width: 300,
+            height: 200,
+            width: 500,
             color: '#00A0AF'
         }
     } catch (error) {
