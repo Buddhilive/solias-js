@@ -5,8 +5,18 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { SoliasChartOptions, SoliasDefaultChartData } from "./types";
+export { SoliasChartOptions, SoliasDefaultChartData } from "./types";
 export namespace Components {
     interface SoliasBarchart {
+        /**
+          * Input data
+         */
+        "data": SoliasDefaultChartData;
+        /**
+          * Chart Options
+         */
+        "options": SoliasChartOptions;
     }
 }
 declare global {
@@ -22,6 +32,14 @@ declare global {
 }
 declare namespace LocalJSX {
     interface SoliasBarchart {
+        /**
+          * Input data
+         */
+        "data"?: SoliasDefaultChartData;
+        /**
+          * Chart Options
+         */
+        "options"?: SoliasChartOptions;
     }
     interface IntrinsicElements {
         "solias-barchart": SoliasBarchart;

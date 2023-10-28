@@ -13,9 +13,13 @@ export const config: Config = {
     },
     {
       type: 'docs-readme',
+      footer: '*Solias Project*',
     },
     {
       type: 'www',
+      copy: [
+        { src: 'script' }
+      ],
       serviceWorker: null, // disable service workers
     },
   ],
