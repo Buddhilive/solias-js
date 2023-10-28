@@ -1,6 +1,9 @@
 import { SoliasChartOptions, SoliasDefaultChartData } from "../types";
+import { SoliasCommonShapes } from "./commonshapes";
 
 export class SoliasBarchartUtil {
+
+    private commonShapes: SoliasCommonShapes;
 
     constructor(
         public chartCanvas: HTMLCanvasElement,
@@ -8,7 +11,7 @@ export class SoliasBarchartUtil {
         public data: SoliasDefaultChartData,
         public options: SoliasChartOptions
         ) {
-            
+            this.commonShapes = new SoliasCommonShapes(chartCtx);
     }
 
     drawChart() {
@@ -38,18 +41,8 @@ export class SoliasBarchartUtil {
       private drawGrid(maxValue: number, barWidth: number, barScale: number, ratioX: number, ratioY: number, values: Array<number>) {
         const axisX = ((values.length * barWidth) * ratioX);
         const axisY = ((maxValue * barScale) * ratioY);
-        this.drawGridLine(16, 16, 16, (axisY + 16));
-        this.drawGridLine(16, (axisY + 16), axisX, (axisY + 16));
-      }
-    
-      private drawGridLine(startX, startY, endX, endY, color = '#1A1B1F') {
-        this.chartCtx.save();
-        this.chartCtx.strokeStyle = color;
-        this.chartCtx.beginPath();
-        this.chartCtx.moveTo(startX, startY);
-        this.chartCtx.lineTo(endX, endY);
-        this.chartCtx.stroke();
-        this.chartCtx.restore();
+        this.commonShapes.drawGridLine(16, 16, 16, (axisY + 16));
+        this.commonShapes.drawGridLine(16, (axisY + 16), axisX, (axisY + 16));
       }
     
       private drawChartBar(upperLeftCornerX, upperLeftCornerY, width, height) {
