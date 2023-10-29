@@ -1,11 +1,43 @@
 import { createChart } from './chart';
+import { cities } from '../script/sample-data';
 
 /**
- * This is basic bar chart
+ * This is basic bar chart.
+## Component
+
+```html
+<solias-chart data="data" options="options"></solias-chart>
+```
+
+## Properties
+
+| Property  | Attribute | Description   | Type                     | Default     |
+| --------- | --------- | ------------- | ------------------------ | ----------- |
+| `data`    | --        | Input data    | `SoliasDefaultChartData` | `undefined` |
+| `options` | --        | Chart Options | `SoliasChartOptions`     | `undefined` |
+
+#### Type `SoliasDefaultChartData`
+
+```js 
+SoliasDefaultChartData {
+    [key: string]: number
+}
+```
+
+#### Type `SoliasChartOptions`
+
+```js
+SoliasChartOptions {
+    height?: number | null;
+    width?: number | null;
+    color?: string;
+}
+```
+## Preview
  */
 
 export default {
-  title: 'Components/Chart',
+  title: 'Examples/Bar Chart',
   tags: ['autodocs'],
   argTypes: {
     data: { control: 'object'},
@@ -17,7 +49,7 @@ export default {
   parameters: {
     docs: {
       source: {
-        code: `<solias-barchart data="data" options="options"></solias-barchart>`,
+        code: `<solias-chart data="data" options="options"></solias-chart>`,
       }
     }
   }
@@ -28,6 +60,7 @@ export default {
  */
 export const Basic = {
   args: {
+    data: cities,
     options: {
       color: '#00A0AF',
       width: 500,
@@ -41,6 +74,7 @@ export const Basic = {
  */
 export const ChangeColor = {
   args: {
+    data: cities,
     options: {
       color: '#f9ab00',
       width: 500,

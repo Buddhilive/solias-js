@@ -1,1 +1,2 @@
-export * from './barchart';
+export * from './commonshapes';
+export * from './text-util';

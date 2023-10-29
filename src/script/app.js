@@ -6,12 +6,12 @@ window.onload = () => {
 
 function loadSimpleBarchart() {
     try {
-        const refElement = document.getElementsByTagName('solias-barchart');
+        const refElement = document.getElementsByTagName('solias-chart');
         refElement[0].data = cities;
         refElement[0].options = {
             height: 200,
-            width: 500,
-            color: '#00A0AF'
+            width: 1000,
+            color: '#e9488b'
         }
     } catch (error) {
         console.log(error);

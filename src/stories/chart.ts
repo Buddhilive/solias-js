@@ -6,7 +6,7 @@ export const createChart = ({
         color: '#00A0AF'
     }
 }) => {
-    const soliasChart = document.createElement('solias-barchart');
+    const soliasChart = document.createElement('solias-chart');
     soliasChart.data = data;
     soliasChart.options = options;
 
