@@ -1,6 +1,6 @@
 import { Component, h, Prop } from '@stencil/core';
 import { SoliasChartOptions, SoliasDefaultChartData } from '../../types';
-import { SoliasBarchartUtil } from '../../utils';
+import { SoliasBarchartUtil } from '../../classes';
 
 @Component({
   tag: 'solias-barchart',

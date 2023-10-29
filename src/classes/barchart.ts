@@ -1,6 +1,6 @@
 import { SoliasChartOptions, SoliasDefaultChartData } from "../types";
-import { SoliasCommonShapes } from "./commonshapes";
-import { SoliasTextUtil } from "./text-util";
+import { SoliasCommonShapes } from "../utils/commonshapes";
+import { SoliasTextUtil } from "../utils";
 
 export class SoliasBarchartUtil {
 
