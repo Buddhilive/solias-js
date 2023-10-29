@@ -5,73 +5,51 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { SoliasChartOptions, SoliasDefaultChartData } from "./types";
+export { SoliasChartOptions, SoliasDefaultChartData } from "./types";
 export namespace Components {
-    interface SoliasButton {
+    interface SoliasBarchart {
         /**
-          * Disables button
+          * Input data
          */
-        "disable": boolean;
+        "data": SoliasDefaultChartData;
         /**
-          * Icon Name
+          * Chart Options
          */
-        "iconName": string;
-        /**
-          * Button Label
-         */
-        "label": string;
-        /**
-          * Button custom class
-         */
-        "styleClass": string;
-        /**
-          * Button style
-         */
-        "styleType": 'filled' | 'outlined' | 'text' | 'elevated' | 'tonal';
+        "options": SoliasChartOptions;
     }
 }
 declare global {
-    interface HTMLSoliasButtonElement extends Components.SoliasButton, HTMLStencilElement {
+    interface HTMLSoliasBarchartElement extends Components.SoliasBarchart, HTMLStencilElement {
     }
-    var HTMLSoliasButtonElement: {
-        prototype: HTMLSoliasButtonElement;
-        new (): HTMLSoliasButtonElement;
+    var HTMLSoliasBarchartElement: {
+        prototype: HTMLSoliasBarchartElement;
+        new (): HTMLSoliasBarchartElement;
     };
     interface HTMLElementTagNameMap {
-        "solias-button": HTMLSoliasButtonElement;
+        "solias-barchart": HTMLSoliasBarchartElement;
     }
 }
 declare namespace LocalJSX {
-    interface SoliasButton {
+    interface SoliasBarchart {
         /**
-          * Disables button
+          * Input data
          */
-        "disable"?: boolean;
+        "data"?: SoliasDefaultChartData;
         /**
-          * Icon Name
+          * Chart Options
          */
-        "iconName"?: string;
-        /**
-          * Button Label
-         */
-        "label"?: string;
-        /**
-          * Button custom class
-         */
-        "styleClass"?: string;
-        /**
-          * Button style
-         */
-        "styleType"?: 'filled' | 'outlined' | 'text' | 'elevated' | 'tonal';
+        "options"?: SoliasChartOptions;
     }
     interface IntrinsicElements {
-        "solias-button": SoliasButton;
+        "solias-barchart": SoliasBarchart;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "solias-button": LocalJSX.SoliasButton & JSXBase.HTMLAttributes<HTMLSoliasButtonElement>;
+            "solias-barchart": LocalJSX.SoliasBarchart & JSXBase.HTMLAttributes<HTMLSoliasBarchartElement>;
         }
     }
 }

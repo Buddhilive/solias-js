@@ -1,16 +1,8 @@
-@import './theme/theme';
-@import './grid/main';
-
 /* Fonts */
 @import './fonts/fonts';
 
 /* Icons */
 @import './icons';
-
-body {
-    margin: 0;
-    padding: 0;
-}
 
 * {
     font-family: 'Poppins', sans-serif;

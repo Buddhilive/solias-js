@@ -13,9 +13,13 @@ export const config: Config = {
     },
     {
       type: 'docs-readme',
+      footer: '*Solias Project*',
     },
     {
       type: 'www',
+      copy: [
+        { src: 'script' }
+      ],
       serviceWorker: null, // disable service workers
     },
   ],
@@ -23,9 +27,5 @@ export const config: Config = {
     browserHeadless: "new",
   },
   globalStyle: 'styles/base.scss',
-  plugins: [sass({
-    injectGlobalPaths: [
-      'styles/theme/_theme.scss'
-    ]
-  })]
+  plugins: [sass()]
 };
