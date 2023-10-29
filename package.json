@@ -1,6 +1,6 @@
 {
   "name": "solias",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.3",
   "description": "Web Component Library made using StencilJS",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
