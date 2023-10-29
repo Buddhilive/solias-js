@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, Element, h, Prop } from '@stencil/core';
 import { SoliasChartOptions, SoliasDefaultChartData } from '../../types';
 import { SoliasBarchart } from '../../classes';
 
@@ -26,6 +26,8 @@ export class SoliasChartComponent {
   @Prop()
   id: string;
 
+  @Element() elmnt: HTMLElement;
+
   chartCanvas: HTMLCanvasElement;
 
   chartCtx: any;
@@ -38,7 +40,8 @@ export class SoliasChartComponent {
       this.chartCanvas.height = 300;
       this.chartCanvas.width = 300;
     }
-    // console.log(this.data);
+    this.initResizeObserver();
+    // console.log(this.elmnt.clientWidth);
     this.chartCtx = this.chartCanvas.getContext('2d');
     this.drawBasicBarChart();
   }
@@ -47,9 +50,44 @@ export class SoliasChartComponent {
     this.drawBasicBarChart();
   }
 
-  drawBasicBarChart() {
+  /**
+   * Draws a basic bar chart
+   */
+  private drawBasicBarChart() {
+    this.clearCanvas();
     const soliasChart = new SoliasBarchart(this.chartCanvas, this.chartCtx, this.data, this.options);
     soliasChart.drawChart();
+  }
+
+  /**
+   * Initialize the resize observer
+   */
+  private initResizeObserver() {
+    const resizeObserver = new ResizeObserver(entries => {
+      // console.log(entries[0].contentRect.width);
+      if (this.chartCanvas.width > entries[0].contentRect.width) {
+        this.chartCanvas.width = entries[0].contentRect.width;
+      } else {
+        this.chartCanvas.width = this.options?.width | 300;
+      }
+      this.drawBasicBarChart();
+    });
+    resizeObserver.observe(this.elmnt);
+  }
+
+  /**
+   * Clears the canvas
+   */
+  private clearCanvas() {
+    // Store the current transformation matrix
+    this.chartCtx.save();
+
+    // Use the identity matrix while clearing the canvas
+    this.chartCtx.setTransform(1, 0, 0, 1, 0, 0);
+    this.chartCtx.clearRect(0, 0, this.chartCanvas.width, this.chartCanvas.height);
+
+    // Restore the transform
+    this.chartCtx.restore()
   }
 
   render() {
@@ -57,7 +95,7 @@ export class SoliasChartComponent {
       <canvas
         ref={(el) => this.chartCanvas = el as HTMLCanvasElement}
         id={this.id}
-        ></canvas>
+      ></canvas>
     );
   }
 

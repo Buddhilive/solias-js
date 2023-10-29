@@ -10,7 +10,7 @@ function loadSimpleBarchart() {
         refElement[0].data = cities;
         refElement[0].options = {
             height: 200,
-            width: 500,
+            width: 1000,
             color: '#e9488b'
         }
     } catch (error) {
