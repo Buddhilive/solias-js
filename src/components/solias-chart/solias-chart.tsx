@@ -20,12 +20,6 @@ export class SoliasChartComponent {
   @Prop()
   options: SoliasChartOptions;
 
-  /**
-   * An unique identifier for the element
-   */
-  @Prop()
-  id: string;
-
   @Element() elmnt: HTMLElement;
 
   chartCanvas: HTMLCanvasElement;
@@ -94,7 +88,7 @@ export class SoliasChartComponent {
     return (
       <canvas
         ref={(el) => this.chartCanvas = el as HTMLCanvasElement}
-        id={this.id}
+        id={this.elmnt.id ? `solias-canvas-${this.elmnt.id}` : ''}
       ></canvas>
     );
   }

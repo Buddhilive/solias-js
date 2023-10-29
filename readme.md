@@ -3,11 +3,11 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/solias)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Solias Web Components
+# Solias Web Component for Charts
 
-Solias is a web component library built with StencilJS which provides a set of web components inspired by [Material 3 Design principles](https://m3.material.io/) to help you create stunning user interfaces with ease.
+Solias is a web component library built with [StencilJS](https://stenciljs.com) which provides a web component that help you to create charts for data visualization with ease.
 
-The name "Solias" pays homage to [Solias Mendis](https://en.wikipedia.org/wiki/Solias_Mendis), a celebrated Sri Lankan artist known for his remarkable contributions to the world of art. Just as Solias Mendis brought his unique artistic vision to life, this library empowers you to bring your web applications to life with beautiful Material Design elements.
+The name "Solias" pays homage to [Solias Mendis](https://en.wikipedia.org/wiki/Solias_Mendis), a celebrated Sri Lankan artist known for his remarkable contributions to the world of art. Just as Solias Mendis brought his unique artistic vision to life, this library empowers you to visualize your data with beautiful charts.
 
 # Documentation
 For detailed usage instructions and documentation on each component, visit the [Solias Documentation](https://solias.buddhilive.com/).

@@ -14,10 +14,6 @@ export namespace Components {
          */
         "data": SoliasDefaultChartData;
         /**
-          * An unique identifier for the element
-         */
-        "id": string;
-        /**
           * Chart Options
          */
         "options": SoliasChartOptions;
@@ -40,10 +36,6 @@ declare namespace LocalJSX {
           * Input data
          */
         "data"?: SoliasDefaultChartData;
-        /**
-          * An unique identifier for the element
-         */
-        "id"?: string;
         /**
           * Chart Options
          */
