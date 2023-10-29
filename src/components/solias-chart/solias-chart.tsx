@@ -1,12 +1,12 @@
 import { Component, h, Prop } from '@stencil/core';
 import { SoliasChartOptions, SoliasDefaultChartData } from '../../types';
-import { SoliasBarchartUtil } from '../../classes';
+import { SoliasBarchart } from '../../classes';
 
 @Component({
-  tag: 'solias-barchart',
+  tag: 'solias-chart',
   shadow: true,
 })
-export class SoliasBarchart {
+export class SoliasChartComponent {
 
   /**
    * Input data
@@ -19,6 +19,12 @@ export class SoliasBarchart {
    */
   @Prop()
   options: SoliasChartOptions;
+
+  /**
+   * An unique identifier for the element
+   */
+  @Prop()
+  id: string;
 
   chartCanvas: HTMLCanvasElement;
 
@@ -42,13 +48,16 @@ export class SoliasBarchart {
   }
 
   drawBasicBarChart() {
-    const soliasChart = new SoliasBarchartUtil(this.chartCanvas, this.chartCtx, this.data, this.options);
+    const soliasChart = new SoliasBarchart(this.chartCanvas, this.chartCtx, this.data, this.options);
     soliasChart.drawChart();
   }
 
   render() {
     return (
-      <canvas ref={(el) => this.chartCanvas = el as HTMLCanvasElement}></canvas>
+      <canvas
+        ref={(el) => this.chartCanvas = el as HTMLCanvasElement}
+        id={this.id}
+        ></canvas>
     );
   }
 

@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { SoliasBarchart } from '../solias-barchart';
+import { SoliasChartComponent } from '../solias-chart';
 
 describe('solias-barchart', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [SoliasBarchart],
+      components: [SoliasChartComponent],
       html: `<solias-barchart></solias-barchart>`,
     });
     expect(page.root).toEqualHtml(`

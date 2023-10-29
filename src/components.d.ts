@@ -8,11 +8,15 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { SoliasChartOptions, SoliasDefaultChartData } from "./types";
 export { SoliasChartOptions, SoliasDefaultChartData } from "./types";
 export namespace Components {
-    interface SoliasBarchart {
+    interface SoliasChart {
         /**
           * Input data
          */
         "data": SoliasDefaultChartData;
+        /**
+          * An unique identifier for the element
+         */
+        "id": string;
         /**
           * Chart Options
          */
@@ -20,36 +24,40 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLSoliasBarchartElement extends Components.SoliasBarchart, HTMLStencilElement {
+    interface HTMLSoliasChartElement extends Components.SoliasChart, HTMLStencilElement {
     }
-    var HTMLSoliasBarchartElement: {
-        prototype: HTMLSoliasBarchartElement;
-        new (): HTMLSoliasBarchartElement;
+    var HTMLSoliasChartElement: {
+        prototype: HTMLSoliasChartElement;
+        new (): HTMLSoliasChartElement;
     };
     interface HTMLElementTagNameMap {
-        "solias-barchart": HTMLSoliasBarchartElement;
+        "solias-chart": HTMLSoliasChartElement;
     }
 }
 declare namespace LocalJSX {
-    interface SoliasBarchart {
+    interface SoliasChart {
         /**
           * Input data
          */
         "data"?: SoliasDefaultChartData;
+        /**
+          * An unique identifier for the element
+         */
+        "id"?: string;
         /**
           * Chart Options
          */
         "options"?: SoliasChartOptions;
     }
     interface IntrinsicElements {
-        "solias-barchart": SoliasBarchart;
+        "solias-chart": SoliasChart;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "solias-barchart": LocalJSX.SoliasBarchart & JSXBase.HTMLAttributes<HTMLSoliasBarchartElement>;
+            "solias-chart": LocalJSX.SoliasChart & JSXBase.HTMLAttributes<HTMLSoliasChartElement>;
         }
     }
 }

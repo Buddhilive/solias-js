@@ -5,7 +5,7 @@ import { createChart } from './chart';
  */
 
 export default {
-  title: 'Components/Chart',
+  title: 'Examples/Bar Chart',
   tags: ['autodocs'],
   argTypes: {
     data: { control: 'object'},
@@ -17,7 +17,7 @@ export default {
   parameters: {
     docs: {
       source: {
-        code: `<solias-barchart data="data" options="options"></solias-barchart>`,
+        code: `<solias-chart data="data" options="options"></solias-chart>`,
       }
     }
   }
