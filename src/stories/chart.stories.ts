@@ -14,6 +14,13 @@ export default {
   render: ({ options, ...args }) => {
     return createChart({ options, ...args });
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `<solias-barchart data="data" options="options"></solias-barchart>`,
+      }
+    }
+  }
 };
 
 /**
