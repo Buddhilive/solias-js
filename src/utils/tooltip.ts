@@ -1,1 +1,3 @@
-export class SoliasTooltip {}
+export class SoliasTooltip {
+    constructor() {}
+}
